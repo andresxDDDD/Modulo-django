@@ -5,8 +5,9 @@ class Producto (models.Model):
     nombre = models.CharField(max_length=100)
     precio = models.IntegerField()
     stock = models.IntegerField()
+    disponible = models.BooleanField(db_default=False)
 
     def __str__(self):
-        return super().__str__()
+        return self.nombre
 
             
